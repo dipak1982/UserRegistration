@@ -24,4 +24,4 @@ ADD ./target/registration-0.0.1-SNAPSHOT.jar /app
 #COPY ${JAR_FILE} app.jar
 
 # java -jar /opt/app/app.jar
-ENTRYPOINT ["java", "-jar", "user-registration-service.jar"]
+CMD ["java", "-jar", "user-registration-service.jar"]
