@@ -2,6 +2,8 @@ package com.user.registration.controller;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
 
 import com.user.registration.entity.AddressEntity;
 import com.user.registration.entity.MemberEntity;
@@ -120,9 +122,9 @@ public class UserControllerTest {
     assertEquals("Dipak", result.getName());
   }
 
-//  @Test
-//  void testDeleteUserInfo() {
-//    this.userController.deleteUserInfo(1l);
-//    verify(this.userService, times(1)).deleteUserInfo(1l);
-//  }
+  @Test
+  void testDeleteUserInfo() {
+    this.userController.deleteUserInfo(1l);
+    verify(this.userService, times(1)).deleteUserInfo(1l);
+  }
 }
