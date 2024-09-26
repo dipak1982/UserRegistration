@@ -1,11 +1,10 @@
-# Use an official OpenJDK runtime as a parent image
-FROM openjdk:17-jdk-alpine
-
-# Set the working directory in the container
+# Use the official OpenJDK 17 image from Docker Hub
+FROM openjdk:17
+# Set working directory inside the container
 WORKDIR /app
-
-# Copy the generated JAR file to the container
-ADD target/registration-0.0.1-SNAPSHOT.jar /app
-EXPOSE 8081
-# Run the JAR file
+# Copy the compiled Java application JAR file into the container
+COPY ./target/user-registration-service.jar /app
+# Expose the port the Spring Boot application will run on
+EXPOSE 8080
+# Command to run the application
 CMD ["java", "-jar", "user-registration-service.jar"]
