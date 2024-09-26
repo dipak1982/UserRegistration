@@ -2,7 +2,7 @@
 #FROM adoptopenjdk/openjdk11:alpine-jre
 
 FROM openjdk:22
-EXPOSE 8080
+EXPOSE 8081
 #LABEL maintainer="javaguides.net"
 
 #Changed the working directory to /opt/app
