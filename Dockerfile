@@ -15,7 +15,7 @@ EXPOSE 8081
 #COPY ${JAR_FILE} app.jar
 
 # ADD target/springboot-docker-0.0.1-SNAPSHOT.jar /opt/app/app.jar
-    ADD target/registration-0.0.1-SNAPSHOT.jar user-registration-service.jar
+    ADD target/registration-0.0.1-SNAPSHOT.jar /apps
 
 # COPY target/springboot-docker-0.0.1-SNAPSHOT.jar /opt/app/app.jar
 #COPY ${JAR_FILE} app.jar
