@@ -1,7 +1,7 @@
 # For Java 11, try this
 #FROM adoptopenjdk/openjdk11:alpine-jre
 
-FROM openjdk:22
+FROM openjdk:17
 EXPOSE 8081
 #LABEL maintainer="javaguides.net"
 
