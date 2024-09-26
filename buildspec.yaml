@@ -5,8 +5,8 @@ phases:
       - mvn clean install
       - echo Logging in to Amazon ECR....
       - aws --version
-      - REPOSITORY_URL=517421232325.dkr.ecr.ap-south-1.amazonaws.com/user-registration
-      - aws ecr get-login-password --region ap-south-1 | docker login --username AWS password-stdin $REPOSITORY_URL
+      - REPOSITORY_URI=517421232325.dkr.ecr.ap-south-1.amazonaws.com/user-registration
+      - aws ecr get-login-password --region ap-south-1 | docker login --username AWS password-stdin $REPOSITORY_URI
       #- $(aws ecr get-login --no-include-email --region ap-south-1)
       # Get commit hash value to tag the image
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
