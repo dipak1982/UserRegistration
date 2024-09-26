@@ -110,12 +110,6 @@
 				<configuration>
 					<repository>raydeepak03/user-registration-service</repository>
 					<tag>${project.version}</tag>
-					<archive>
-						<manifest>
-							<addClasspath>true</addClasspath>
-							<mainClass>com.example.MainClass</mainClass> <!-- Replace with your main class -->
-						</manifest>
-					</archive>
 				</configuration>
 				<dependencies>
 					<dependency>
