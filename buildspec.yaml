@@ -7,15 +7,9 @@ phases:
       - aws --version
       - REPOSITORY_URI=517421232325.dkr.ecr.ap-south-1.amazonaws.com/user-registration
       - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin $REPOSITORY_URI
-      #- $(aws ecr get-login --no-include-email --region ap-south-1)
       # Get commit hash value to tag the image
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
-      #- IMAGE_TAG=${COMMIT_HASH:=latest}
-      # Replace with your application name
-      #- APPLICATION_NAME=spring-boot-sample-app
-      # Replace with this 435320931996.dkr.ecr.ap-south-1.amazonaws.com to your repository URI
-      #- REPOSITORY_URI=435320931996.dkr.ecr.ap-south-1.amazonaws.com/$APPLICATION_NAME
   build:
     commands:
       - echo Build started on `date`
