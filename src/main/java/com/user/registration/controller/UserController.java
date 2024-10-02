@@ -59,10 +59,10 @@ public class UserController {
     return ResponseEntity.status(HttpStatus.ACCEPTED).body(userList);
   }
 
-  @DeleteMapping("/delete-User-Info/{id}")
-  public void deleteUserInfo(@PathVariable long id) {
-    this.userService.deleteUserInfo(id);
-  }
+  //  @DeleteMapping("/delete-User-Info/{id}")
+  //  public void deleteUserInfo(@PathVariable long id) {
+  //    this.userService.deleteUserInfo(id);
+  //  }
 
   @GetMapping("/findallusers")
   public ResponseEntity<List> findAllUsers() {
