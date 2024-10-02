@@ -27,7 +27,8 @@ phases:
       - echo Writing image definitions file...
       # Give your container name
       - printf '[{"name":"user-registration-service", "imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
-      - DOCKER_CONTAINER_NAME=user-registration
+      # copy container name from AWS ECR
+      - DOCKER_CONTAINER_NAME=user-registration-registry
       - printf '[{"name":"%s","imageUri":"%s"}]' $DOCKER_CONTAINER_NAME $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
       - echo $DOCKER_CONTAINER_NAME
       - echo printing imagedefinitions.json
